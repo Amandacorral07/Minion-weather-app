@@ -1,4 +1,15 @@
-
+body {
+  background-image: url(despicable-me-2-minions-background-1920x1200.jpg);
+  background-size: 1740px 1040px;
+background-position: right top;
+  background-repeat: no-repeat;
+ 
+}
+.weather-app {
+  position: relative;
+  top: 100px;
+  background-color: black;
+}
 h1{
   color: blue;
   font-size: 24px;
