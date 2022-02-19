@@ -15,7 +15,6 @@ return `${day} ${hours}:${minutes}`;
 
 
 function displayTemperature(response) {
-  console.log(response.data);
   let temperatureElement=document.querySelector("#temperature");
   let cityElement=document.querySelector("#city");
   let descriptionElement=document.querySelector("#weather-description");
@@ -23,6 +22,7 @@ function displayTemperature(response) {
   let windElement=document.querySelector("#wind");
   let feelsLikeElement=document.querySelector("#feels-like");
   let dateElement=document.querySelector("#date");
+  let iconElement=document.querySelector("#main-weather-icon");
   temperatureElement.innerHTML=Math.round(response.data.main.temp);
   cityElement.innerHTML=response.data.name; 
   descriptionElement.innerHTML=response.data.weather[0].description;
@@ -30,11 +30,16 @@ function displayTemperature(response) {
   windElement.innerHTML=Math.round(response.data.wind.speed);
   feelsLikeElement.innerHTML=Math.round(response.data.main.feels_like);
   dateElement.innerHTML=formatDate(response.data.dt*1000);
+  iconElement.setAttribute("src",`weather-icons/${response.data.weather[0].icon}.svg` );
+  iconElement.setAttribute("alt", response.data.weather[0].description );
+
 }
+
+
 
 
 let apiKey="04516b03d862a33f9817076057aa38aa";
 let units="metric";
-let apiUrl=`https://api.openweathermap.org/data/2.5/weather?q=London&appid=${apiKey}&units=${units}`;
-console.log(apiUrl);
+let city="Vancouver"
+let apiUrl=`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
 axios.get(apiUrl).then(displayTemperature);
