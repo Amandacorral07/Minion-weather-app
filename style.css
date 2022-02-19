@@ -96,6 +96,9 @@ li {
   font-size: 25px;
   font-weight: 100;
   line-height: 20px;
+  
+}
+li::first-letter{
   text-transform: capitalize;
 }
 .weather-app {
