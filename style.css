@@ -81,14 +81,12 @@ h1{
  padding-top: 20px;
 }
 
-#wind, #feels-like, #humidity {
+.wind, .feelsLike, .humidity {
   padding-top: 20px;
   position: relative;
   
 }
-.forecast {
-  
-}
+
 
 
 li {
@@ -98,6 +96,7 @@ li {
   font-size: 25px;
   font-weight: 100;
   line-height: 20px;
+  text-transform: capitalize;
 }
 .weather-app {
   max-width: 600px;
