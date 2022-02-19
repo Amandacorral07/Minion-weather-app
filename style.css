@@ -1,3 +1,9 @@
+@font-face {
+  src: url(fonts/lasvegas-jackpot.ttf);
+  font-family: minionFont;
+}
+
+
 body {
   background-image: url(despicable-me-2-minions-background-1920x1200.jpg);
   background-size: 1740px 1040px;
@@ -37,20 +43,24 @@ background-position: right top;
   margin: 0;
   padding: 0;
 }
+
 h1{
   color:#133A60;
-  font-size: 40px;
+  font-size: 70px;
   font-weight: 100;
   line-height: 28px;
   position: relative;
-  top: 10px;
+  top: 20px;
   left: 10px;
+  font-family: minionFont;
 }
+
 .day {
   margin:0 auto;
   padding:20px;
   position: relative;
   left: -10px;
+  top: 20px;
 }
 #weather-description {
   padding-top: 10px;
