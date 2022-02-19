@@ -3,24 +3,30 @@ body {
   background-size: 1740px 1040px;
 background-position: right top;
   background-repeat: no-repeat;
+  font-family: 'Balsamiq Sans', cursive;
+  
  
 }
 .weather-app {
   position: relative;
   top: 100px;
-  background-color: black;
+  
 }
 h1{
-  color: blue;
-  font-size: 24px;
+  color:#133A60;
+  font-size: 40px;
   font-weight: 100;
   line-height: 28px;
 }
 .day {
-  margin:0;
-  padding:0;
+  margin:0 auto;
+  padding:20px;
+  position: relative;
+  left: -20px;
 }
-
+#weather-description {
+  padding-top: 10px;
+}
 img{
   max-width: 300px;
   max-height: 300px;
@@ -31,22 +37,24 @@ img{
   top: -30px;
 }
 .description{
- padding-top: 40px;
+ padding-top: 20px;
 }
-#humidity-img, #wind-img, #feels-like-img {
-  max-width: 30px;
-  max-height: 30px;
-}
-#wind, #feels-like {
+
+#wind, #feels-like, #humidity {
   padding-top: 20px;
+  position: relative;
+  
+}
+.forecast {
+  
 }
 
 
 li {
   list-style: none;
   margin: 0;
-  color: blue;
-  font-size: 16px;
+  color:#133A60;
+  font-size: 25px;
   font-weight: 100;
   line-height: 20px;
 }
@@ -55,25 +63,25 @@ li {
   margin: 0 auto;
   margin-top: 30px;
   padding: 20px;
-  border: 1px solid blue;
+  border: 3px solid #133A60;
   border-radius: 8px;
 }
-
+ strong, .units {
+   position: relative;
+   left: 40px;
+   color:#133A60;
+ }
 strong{
-  font-size: 100px;
+  font-size: 110px;
   font-weight: 400;
   line-height: 1;
 }
 .units {
   position: relative;
-  font-size: 16px;
+  font-size: 20px;
   top: -50px;
-  left: -15px;
 }
-.col-6 {
-  position: relative;
-  left: 30px;
-}
+
 footer{
   margin: 0 auto;
   position: relative;
