@@ -23,6 +23,7 @@ function displayTemperature(response) {
   let feelsLikeElement=document.querySelector("#feels-like");
   let dateElement=document.querySelector("#date");
   let iconElement=document.querySelector("#main-weather-icon");
+  
 
   celsiusTemperature=response.data.main.temp;
 
@@ -35,6 +36,8 @@ function displayTemperature(response) {
   dateElement.innerHTML=formatDate(response.data.dt*1000);
   iconElement.setAttribute("src",`weather-icons/${response.data.weather[0].icon}.svg` );
   iconElement.setAttribute("alt", response.data.weather[0].description );
+  document.querySelector("#maxTemp").innerHTML=Math.round(response.data.main.temp_max);
+  document.querySelector("#minTemp").innerHTML=Math.round(response.data.main.temp_min);
 
 }
 function search(city){

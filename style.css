@@ -64,34 +64,33 @@ h1{
   padding:20px;
   position: relative;
   left: -10px;
-  top: 20px;
+  top: 30px;
 }
 #weather-description {
-  padding-top: 10px;
+  position: relative;
+  left:40px;
+  top: 50px;
 }
 #main-weather-icon {
   max-width: 180px;
   min-width: 180px;
   position: relative;
-  left: 30px;
-  top: 20px;
-}
-#minions {
-  position: relative;
-  left: -20px;
-  top: -30px;
+  left: 40px;
+  top: 40px;
 }
 .description{
- padding-top: 20px;
+ padding-top: 40px;
 }
-
-.wind, .feelsLike, .humidity {
-  padding-top: 20px;
+#temp-description{
   position: relative;
-  
+  top: 68px;
+  left: 30px;
 }
-
-
+.wind, .feelsLike, .humidity {
+  padding-top: 35px;
+  position: relative;
+  top: 30px;
+}
 
 li {
   list-style: none;
@@ -122,23 +121,25 @@ a{
 }
  strong, .units {
    color:#133A60;
- }
+}
+
 strong{
   font-size: 110px;
   font-weight: 400;
   line-height: 1;
   position: relative;
   left: 40px;
+  top: 60px;
 }
 .active{
   color:#133A60;
   cursor: default;
-  
+
 }
 .units {
   position: relative;
   font-size: 20px;
-  top: -60px;
+  top:-3px;
  left: 40px;
 }
 
