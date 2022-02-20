@@ -113,6 +113,9 @@ li::first-letter{
   border: 3px solid #133A60;
   border-radius: 8px;
 }
+a{
+  text-decoration: none;
+}
 .float-left {
   position: relative;
   left: 10px;
@@ -126,6 +129,11 @@ strong{
   line-height: 1;
   position: relative;
   left: 40px;
+}
+.active{
+  color:#133A60;
+  cursor: default;
+  
 }
 .units {
   position: relative;
