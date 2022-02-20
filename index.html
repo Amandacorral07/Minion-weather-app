@@ -8,9 +8,6 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&family=Dongle:wght@300;400;700&family=Life+Savers:wght@400;700&family=Poppins:wght@100;200;300;400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="ice cream minions.png">
-  <link rel="stylesheet" href="clear-day.svg">
-  <link rel="stylesheet" href="design/cartoon-static/.gitkeep">
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <link rel="stylesheet" href="style.css">
   <title>Minion Weather App</title>
@@ -18,7 +15,16 @@
 <body class="weather-app">
   <div class="container">
     <div class="weather-app-wrapper">
-    <div class="Vanilla-weather-app">
+      <form id="search-form" class="mb-3 mt-3">
+        <div class="row">
+        <div class="col-9">
+        <input type="search" placeholder="Type a city.." class="form-control" id="city-input" autocomplete="off"/>
+      </div>
+      <div class="col-3">
+        <input type="submit" value="search" class="btn btn-primary"/>
+      </div>
+    </div>
+      </form>
     <h1 id="city"></h1>
     <ul class="day">
       <li> Last updated: <span id="date"></span>
@@ -59,7 +65,6 @@
       </div>
     </div>
   </div>
-  </div>
   
 </body>
 <footer>
@@ -67,7 +72,7 @@
     Open-source code
   </a>  by Amanda Corral
   <br>
-  <a href="https://www.flaticon.com/free-icons/sun" title="sun icons" id="flaticon">Weather icons created by Freepik - Flaticon</a>
+  <a href="https://basmilius.github.io/weather-icons/" title="sun icons" id="flaticon">Weather icons</a> created by Basmilius
 </footer>
 <script src= "script.js"></script>
 </html>

@@ -43,6 +43,10 @@ background-position: right top;
   margin: 0;
   padding: 0;
 }
+#search-form{
+  position: relative;
+  left: 20px;
+}
 
 h1{
   color:#133A60;
