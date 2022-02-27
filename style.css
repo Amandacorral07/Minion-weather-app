@@ -67,25 +67,26 @@ h1{
 #weather-description {
   position: relative;
   left:30px;
-  top: 50px;
+  top: 25px;
 }
 #main-weather-icon {
   max-width: 180px;
   min-width: 180px;
   position: relative;
   left: 40px;
-  top: 40px;
+  top: 18px;
 }
 .description{
  padding-top: 40px;
+
 }
 #temp-description{
   position: relative;
-  top: 68px;
+  top: 48px;
   left: 30px;
 }
 .wind, .feelsLike, .humidity {
-  padding-top: 35px;
+  padding-top: 25px;
   position: relative;
   top: 30px;
 }
@@ -146,7 +147,10 @@ strong{
 .weather-forecast{
   margin-top:30px ;
   text-align: center;
-  
+}
+#forecast{
+position: relative;
+top: 30px;
 }
 .weather-forecast-max, .weather-forecast-min{
   font-size: 13px;
