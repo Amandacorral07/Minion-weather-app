@@ -12,14 +12,15 @@ let days=["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Sat
 let day= days[date.getDay()];
 return `${day} ${hours}:${minutes}`;
 }
-function displayForecast(){
+function displayForecast(response){
+  console.log(response.data.daily);
   let forecastElement=document.querySelector("#forecast");
   let forecastHTML=`<div class="row">`;
   let days=["Thu", "Fri", "Sat"];
   days.forEach(function(day){
   forecastHTML= forecastHTML + 
   `
-    <div class="col-4">
+    <div class="col-2">
       <div class="weather-forecast-date">${day}</div>
       <img src="weather-icons/01d.svg" alt="" width="42"/>
       <div class="weather-forecast-temperature">
@@ -28,11 +29,16 @@ function displayForecast(){
         <span class="weather-forecast-min">12°</span>
       </div>
 </div>`;
+})
 forecastHTML=forecastHTML + `</div`;
 forecastElement.innerHTML=forecastHTML;
-})
 }
+function getForecast(coordinates){
+  let apiKey="04516b03d862a33f9817076057aa38aa"
+  let apiUrl=`https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&exclude={part}&appid=${apiKey}&units=metric`;
 
+axios.get(apiUrl).then(displayForecast);
+}
 function displayTemperature(response) {
   let temperatureElement=document.querySelector("#temperature");
   let cityElement=document.querySelector("#city");
@@ -59,6 +65,7 @@ function displayTemperature(response) {
   document.querySelector("#maxTemp").innerHTML=Math.round(response.data.main.temp_max);
   document.querySelector("#minTemp").innerHTML=Math.round(response.data.main.temp_min);
 
+getForecast(response.data.coord)
 }
 function search(city){
   let apiKey="04516b03d862a33f9817076057aa38aa";
@@ -104,4 +111,3 @@ celsiusLink.addEventListener("click", displayCelisusTemperature);
 
 search("Los Angeles")
 
-displayForecast();
