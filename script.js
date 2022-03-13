@@ -32,7 +32,7 @@ function displayForecast(response){
     if (index<6) {
   forecastHTML= forecastHTML + 
   `
-    <div class="col-2">
+<div class="col-2">
       <div class="weather-forecast-date">${formatDay(forecastDay.dt)}</div>
       <img src="weather-icons/${forecastDay.weather[0].icon}.svg" alt="" width="42"/>
       <div class="weather-forecast-temperature">
@@ -118,8 +118,8 @@ let celsiusTemperature=null;
 let form=document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
 
-//let fahrenheitLink=document.querySelector("#fahrenheit-link");
-//fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
+let fahrenheitLink=document.querySelector("#fahrenheit-link");
+fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
 
 let celsiusLink=document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", displayCelisusTemperature);
