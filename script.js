@@ -73,12 +73,12 @@ function displayTemperature(response) {
   descriptionElement.innerHTML=response.data.weather[0].description;
   humidityElement.innerHTML=response.data.main.humidity;
   windElement.innerHTML=Math.round(response.data.wind.speed);
-  feelsLikeElement.innerHTML=Math.round(response.data.main.feels_like);
+  feelsLikeElement.innerHTML=Math.round(response.data.main.feels_like*9/5+32);
   dateElement.innerHTML=formatDate(response.data.dt*1000);
   iconElement.setAttribute("src",`weather-icons/${response.data.weather[0].icon}.svg` );
   iconElement.setAttribute("alt", response.data.weather[0].description );
-  document.querySelector("#maxTemp").innerHTML=Math.round(response.data.main.temp_max);
-  document.querySelector("#minTemp").innerHTML=Math.round(response.data.main.temp_min);
+  document.querySelector("#maxTemp").innerHTML=Math.round(response.data.main.temp_max*9/5+32);
+  document.querySelector("#minTemp").innerHTML=Math.round(response.data.main.temp_min*9/5+32);
 
 getForecast(response.data.coord)
 }

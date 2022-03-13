@@ -6,8 +6,9 @@
 
 body {
   background-image: url(despicable-me-2-minions-background-1920x1200.jpg);
-  background-size: 1740px 1040px;
-background-position: right top;
+  background-size: cover;
+background-position: center center;
+background-attachment: fixed;
   background-repeat: no-repeat;
   font-family: 'Balsamiq Sans', cursive;
   box-shadow:inset 0 -3em 3em rgba(0,0,0,0.1),
@@ -15,6 +16,12 @@ background-position: right top;
   0.3em 0.3em 1em rgba(0,0,0,0.3);
   
 }
+@media only screen and (max-width: 767px) {
+  body{
+    background-image: url(despicable-me-2-minions-background-1920x1200.jpg)
+  }
+}
+
 .container{
     
     border: 3px solid transparent;
@@ -159,4 +166,9 @@ footer{
   margin: 0 auto;
   position: relative;
   top: 90px;
+}
+@media (max-width:567px){
+  .description{
+    display: none;
+  }
 }
